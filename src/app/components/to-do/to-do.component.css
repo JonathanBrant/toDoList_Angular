@@ -1,0 +1,47 @@
+td{
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	padding: 10px 0;
+}
+
+tr:hover td{
+	background-color: rgba(255,255,255,.1);
+}
+
+
+td:nth-child(1){
+	width: 24px;
+}
+
+td:nth-child(3){
+	width: 72px;
+	font-size: 12px;
+	text-align: center;
+}
+
+td:nth-child(2){
+	cursor: default;
+    width: 75%;
+}
+
+td:nth-child(4){
+	width: 36px;
+}
+
+tr.done td:nth-child(2){
+	text-decoration: line-through;
+}
+
+input[type=checkbox]{
+	cursor: pointer;
+	
+}
+
+i{
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+i:hover{
+	opacity: 1;
+}
+
