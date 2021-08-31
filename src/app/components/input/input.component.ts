@@ -8,11 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InputComponent implements OnInit {
   constructor() { }
 
-  input:string = "";
-  getTask() {
   
-  }
-
   ngOnInit(): void {
   }
 
