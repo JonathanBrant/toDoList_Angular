@@ -8,12 +8,11 @@ import { TaskService } from 'src/app/services/task.service';
   styleUrls: ['./to-do-list.component.css']
 })
 export class ToDoListComponent implements OnInit {
-
   public tasks:Todo[];
-  private ts: TaskService = new TaskService();
+  // private ts: TaskService = new TaskService();  
   
-  constructor() { 
-    this.tasks = this.ts.getTasks();
+  constructor(ts:TaskService) { 
+    this.tasks = ts.getTasks();
   }
 
   ngOnInit(): void {

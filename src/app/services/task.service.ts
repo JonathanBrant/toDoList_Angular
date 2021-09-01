@@ -8,7 +8,6 @@ export class TaskService {
   tasks: Todo[];
   constructor() { 
     this.tasks = [
-      {done: false, text: 'Estudar Angular', priority: 1},
     ]
   } 
   
