@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from 'src/app/models/ToDo';
-import { InputComponent } from '../input/input.component';
+import { TaskService } from 'src/app/services/task.service';
+
 
 @Component({
   selector: 'app-to-do',
@@ -9,13 +10,10 @@ import { InputComponent } from '../input/input.component';
 })
 export class ToDoComponent implements OnInit {
 
-  @Input() tasks!:Todo; 
-  
-
-  constructor() { }
-
-  
-
+  @Input() tasks!:Todo;   
+  constructor() {
+  }
+     
   ngOnInit(): void {
   }
 
