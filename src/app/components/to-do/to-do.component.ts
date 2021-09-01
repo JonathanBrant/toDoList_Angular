@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from 'src/app/models/ToDo';
-import { TaskService } from 'src/app/services/task.service';
-
 
 @Component({
   selector: 'app-to-do',

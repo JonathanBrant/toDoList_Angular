@@ -1,31 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../models/ToDo';
 
-const tasks:Todo[] =[
-  {
-    done: true,
-    text: "Fazer almoço",
-    priority: 3
-  }  
-]
-
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
-  constructor() { } 
+  tasks: Todo[];
+  constructor() { 
+    this.tasks = [
+      {done: false, text: 'Estudar Angular', priority: 1},
+    ]
+  } 
   
   getTasks():Todo[] {
-    return tasks
+    return this.tasks
   }   
 
-  addTasks(t:string):void {
-    tasks.push({
-      done: false,
-      text: t,
-      priority: 1,
-    })
-    console.log(tasks)
+  addTasks(task:Todo) {
+    this.tasks.push(task)
+    console.log(this.tasks)
   }
 
 }

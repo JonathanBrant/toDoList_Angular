@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Todo } from 'src/app/models/ToDo';
 import { TaskService } from 'src/app/services/task.service';
 
@@ -8,21 +8,22 @@ import { TaskService } from 'src/app/services/task.service';
   styleUrls: ['./input.component.css'],
 })
 export class InputComponent implements OnInit {
-  public tasks!:Todo[];
+  service: TaskService;
+  taskInput: string = '';
 
-  @Output() addNewTask = new EventEmitter();
+  constructor(service: TaskService) {
+    this.service = service;
+  }
 
-  constructor() {
-
+  addTasks() {
+    var task: Todo = {
+      done: false,
+      text: this.taskInput,
+      priority: 1,
+    };
+    this.taskInput = ""
+    this.service.addTasks(task)
   }
 
   ngOnInit(): void {}
-
-  adicionandoNovaTarefa() {
-    let input: HTMLInputElement = <HTMLInputElement>(document.querySelector('input'));
-    console.log(typeof(input.value))
-    this.addNewTask.emit(input.value)
-    input.value = '';
-  }
-
 }
