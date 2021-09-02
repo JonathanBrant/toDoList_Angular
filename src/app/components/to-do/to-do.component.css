@@ -1,6 +1,7 @@
 td{
 	border-bottom: 1px solid rgba(255,255,255,.3);
 	padding: 10px 0;
+	
 }
 
 tr:hover td{
@@ -27,7 +28,7 @@ td:nth-child(4){
 	width: 36px;
 }
 
-tr.done td:nth-child(2){
+.done{
 	text-decoration: line-through;
 }
 
@@ -45,3 +46,6 @@ i:hover{
 	opacity: 1;
 }
 
+.teste {
+	color: red;
+}

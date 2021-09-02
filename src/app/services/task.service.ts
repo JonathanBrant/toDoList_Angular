@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { Todo } from '../models/ToDo';
 
 @Injectable({
@@ -18,6 +18,11 @@ export class TaskService {
   addTasks(task:Todo) {
     this.tasks.push(task)
     console.log(this.tasks)
+  }
+
+  removeTasks(task:Todo) {
+    console.log("clicou")
+    this.tasks.splice(this.tasks.indexOf(task), 1)
   }
 
 }

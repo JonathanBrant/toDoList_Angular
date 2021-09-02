@@ -16,13 +16,19 @@ export class InputComponent implements OnInit {
   }
 
   addTasks() {
-    var task: Todo = {
-      done: false,
-      text: this.taskInput,
-      priority: 1,
-    };
-    this.taskInput = ""
-    this.service.addTasks(task)
+    if(this.taskInput == "") {
+      alert("Digite uma tarefa!")
+    } else {
+      var task: Todo = {
+        done: false,
+        text: this.taskInput,
+        priority: 1,
+      };
+      this.taskInput = ""
+      this.service.addTasks(task)
+    }
+  
+    
   }
 
   ngOnInit(): void {}

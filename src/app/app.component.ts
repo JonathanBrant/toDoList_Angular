@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Todo } from './models/ToDo';
+import { TaskService } from './services/task.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
-  title = 'toDoList-Angular';
+tasks!: Todo[]
+
 }

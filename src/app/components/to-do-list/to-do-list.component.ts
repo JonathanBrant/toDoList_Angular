@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from 'src/app/models/ToDo';
 import { TaskService } from 'src/app/services/task.service';
 
@@ -8,7 +8,7 @@ import { TaskService } from 'src/app/services/task.service';
   styleUrls: ['./to-do-list.component.css']
 })
 export class ToDoListComponent implements OnInit {
-  public tasks:Todo[];
+  @Input() tasks:Todo[];
   // private ts: TaskService = new TaskService();  
   
   constructor(ts:TaskService) { 

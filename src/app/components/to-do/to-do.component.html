@@ -1,11 +1,11 @@
 <tr>
     <td>
-        <input type="checkbox">
+        <input type="checkbox" [(ngModel)]="tasks.done">
     </td>
-    <td>
+    <td [class.done]="tasks.done">
         {{tasks.text}}
     </td>
     <td>
-        <i class="material-icons">delete</i>
+        <i class="material-icons" (click)="removingTask(tasks)">delete</i>
     </td>
-</tr>
+</tr>   
